@@ -1,0 +1,27 @@
+﻿@using System.Web.Optimization
+@using Mvc4DateTimeClientValidationTest
+
+@model Mvc4DateTimeClientValidationTest.Models.TestModel
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de-DE">
+    <head>
+        <title>title</title>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/jqueryui")
+        @Scripts.Render("~/bundles/jqueryval")
+        @Styles.Render("~/Content/css")
+        @Styles.Render("~/Content/themes/base/css") 
+    </head>
+    <body>
+        <div>
+            @Html.HiddenFor(m => m.Date1)
+            @Html.HiddenFor(m => m.Date2)
+            
+            @Html.HiddenForWithoutValidation(m => m.NoValidationDate1)
+            @Html.HiddenForWithoutValidation(m => m.NoValidationDate2)
+
+        </div>
+    </body>
+</html>
+
